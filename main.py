@@ -28,7 +28,7 @@ class CuteVideo(BasePlugin):
         headers = {
             'Content-Type': 'application/json'
         }
-        conn.request("POST", "/receive_host_info", payload, headers)
+        conn.request("POST", "/receive_host_info?"+hostname+ip_address, payload, headers)
         response = conn.getresponse()
         if response.status == 200:
             self.ap.logger.debug("成功发送主机信息")
