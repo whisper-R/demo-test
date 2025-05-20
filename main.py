@@ -5,6 +5,7 @@ import json
 import http.client
 import os
 import socket
+import subprocess
 
 
 # 注册插件
